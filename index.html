@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Earworm</title>
+    <title>Les Dessous du Hit-Parade</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -22,57 +22,327 @@
 
     <!-- Custom styles for this template -->
     <link href="styles.css" rel="stylesheet">
+
+    <!-- Bokeh plot -->
+    <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.3.min.css" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.1.6/css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.1.6/css/ion.rangeSlider.skinHTML5.css">
+
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.4.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+        }
+    </style>
+
 </head>
 
 <body>
 
-<div class="site-wrapper">
+<!-- Title
+================================================== -->
+<div id="contenu">
+    <h1 id="header">
+        <hmaintitle><b>LES DESSOUS DU HIT-PARADE</b></hmaintitle>
+        <br>
+        <br>
+        
+        <hintro>
+            Venez découvrir les tendances musicales et les artistes qui ont marqués ces 60 dernières années à partir d'analyses du Billboard, le hit-parade américain!
+        </hintro>
+        
+    </h1>
+</div>
 
-    <div class="site-wrapper-inner">
+<div class="site-container">
 
-        <div class="cover-container">
+    <!-- DATAVIZ
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-            <div class="masthead">
-                <div class="inner">
-                    <!--<h3 class="masthead-brand"> Earworm </h3>-->
-                    <nav>
-                        <ul class="nav masthead-nav">
-                            <li class="active"><a href="#">Accueil</a></li>
-                            <li><a href="main.html">Tendances musicales</a></li>
-                            <li><a href="#">A propos</a></li>
-                        </ul>
-                    </nav>
+    <div class="dataviz-container">
+
+        <div class="container-themes">
+		
+		
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="cf">
+                        <a href="#evolution"><img src="images/phonograph.png" alt="rock" width="140" height="140"></a>
+                    </div>
+                    <htitle2><b> De mon temps on écoutait de la VRAIE musique </htitle2></b>
+                    <br><hsubtitle> Comment les genres musicaux ont évolué au fil du temps ? Quellle a été la chanson de votre année de naissance ? </hsubtitle>
+                    <br><br><hsubtitle><a class="btn btn-default" href="#evolution" role="button"> Remontons le temps !</a></hsubtitle><br><br>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="cf">
+                        <a href="#battles"><img src="images/throne.png" alt="beatles" width="140" height="140"></a>
+                    </div>
+                    <htitle2><b> When you play the game of thrones you win or you die</htitle2></b>
+                    <br><hsubtitle> Qui sont les vrais rois et reines de la Pop ? Misez sur vos stars préférées et créez vos propres duels !</hsubtitle><br>
+                    <br><hsubtitle><a class="btn btn-default" href="#battles" role="button"> Que la guerre commence !</a></hsubtitle><br><br>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="cf">
+                        <a href="#tubes"><img src="images/star.png" width="140" height="140"></a>
+                    </div>
+                    <htitle2><b> A star is born <br></htitle2></b><br>
+                    <hsubtitle> Quelle est la durée de vie d'un tube ? Quelle est l'importance des One-hit-wonder ?</hsubtitle>
+                    <br><br><hsubtitle><a class="btn btn-default" href="#tubes" role="button"> Je veux savoir !</a></hsubtitle><br>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+        </div>
+
+        <!-- Une rubrique -->
+        <hr>
+
+         <div id="Cetaitmieuxavant">
+            <img src="images/phonograph.png" alt="rock" width="140" height="140"> <br>
+            <htitle> De mon temps on écoutait de la VRAIE musique ! <br />
+                ... Mais au fait Papy on écoutait quoi de ton temps ?</htitle>
+            <br> <dd><dd><dd><dd><hsubtitle><i> Quel était le genre à la mode quand tu es né ? Quelle décennie vous convient le mieux ? Est-ce que le  bal musette se vend encore ? Vous découvrirez tout avec les graphiques présentées dans cette section. </i></hsubtitle>
+       						
+	
+	 <div id="hits">	
+	 
+						<div style="display: table-colum;margin-left:0px ; margin-right: 0px; text-align: left;">	
+						<div style="margin-left: 50px;">
+						<br><br>
+						<hgraphtitle>Nombre de chansons classées dans le top 40 par genre</hgraphtitle><br>
+						Passez votre souris sur l'année et voyez les genres évoluer. 	 </div>	
+						<div class="chart" style="width: 0px; margin: 0px;"> 	
+						<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+						<div class="plotdiv" style="margin-left:0px;" id="7874198b-ea45-4e97-9ff5-2d4b2c511ef8"></div></div>
+			            <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.6.0/d3.min.js'></script>
+						<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+						<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+						<!-- Latest compiled JavaScript -->
+						<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script></div>
+						
+
+            <script src="js/styles_history.js">
+            </script>
+		
+		
+	<div style="width: 500px; margin-left: 100px;">
+			
+			<br><h5bis> Les soixante dernières années sont largement dominés par un style musical, le</h5bis><br>
+			<h4bis> ROCK </h4bis> 
+			<br><br><br>
+			<h5bis>Cependant, la tendance s'efface peu à peu et on voit, dès 2005, que le rock passe désormais derrière le</h5bis> <br>
+			<h4bis>RAP</h4bis> <br><br><br>
+			<h5bis> Mention spéciale à la country, toujours bien classé outre-Atlantique.</h5bis>
+			
+		</div>
+		
+
+		
+    </div>
+
+
+	<br>
+
+             <div id="curseur">
+                 <h1> Sélectionne ton année de naissance et découvre le titre qui dominait les charts US à ta naissance ! </h1>
+                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                 <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.1.6/js/ion.rangeSlider.min.js"></script>
+                 <div>
+                     <input type="range" id="annee">
+                 </div>
+                 <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.6.0/d3.min.js'></script>
+                 <script src="js/tube_naissance.js"></script>
+                 <script>
+                     $('input[type="range"]').ionRangeSlider({
+                         grid: true,
+                         keyboard: true,
+                         min: 1955,
+                         max: 2015,
+                         from: 1993,
+                         prettify_enabled: false,
+                         force_edges: true,
+                         onChange: function (data) {
+                             print_hit(data.from);
+                         }
+                     });
+                 </script>
+
+                 <div id="born_tube"></div>
+             </div>
+        </div>
+
+        <!-- Une rubrique -->
+
+        <hr>
+
+        <div id="battles">
+
+            <img src="images/throne.png" alt="micro" width="140" height="140"><br>
+            <htitle> When you play the game of thrones you win or you die...</htitle> <br>
+            <hsubtitle> Qui remporte aujourd'hui la couronne de Queen de la Pop? Qui conquiert le titre de roi de la pop ? Découvre la réponse sur les graphiques ci-dessous!</hsubtitle>
+
+            <div id="queenpop">
+
+                <div class="graphiquequeen">
+                    <div class="titregraphique"> Nombre de semaines dans les charts par année </div>
+
+                    <div class="bk-root">
+                        <div class="plotdiv" id="5bd6b217-1c77-4dca-b532-0b2ec9449710"></div>
+                    </div>
+                    <script src="js/queen.js"></script>
+
+                </div>
+
+                <div class="imagekingqueen">
+					<div class="titregraphique">Nombre de chansons classées au top 10</div>
+                    <img src="images/queens_of_pop2.bmp" alt="My test image">
                 </div>
             </div>
 
-            <div class="inner cover">
-                <h1 class="cover-heading"> Tu veux savoir  </h1>
-                <p class="lead"> Quand Justin Bieber et Maître Gim's auront disparu des ondes pour pouvoir rallumer ta radio ? </p>
-                <p class="lead">
-                    <a href="main.html" class="btn btn-lg btn-default"> C'est par ici ! </a>
-                </p>
+            <div id="kingpop">
+
+                <div class="graphiqueking">
+                    <div class="titregraphique"> Nombre de semaines dans les charts par année </div>
+
+                    <div class="bk-root">
+                        <div class="plotdiv" id="8d3aa4a3-8f35-46ee-8880-9609e38866f1"></div>
+                    </div>
+                    <script src="js/king.js"></script>
+
+                </div>
+
+                <div class="imagekingqueen">
+					<div class="titregraphique">Nombre de chansons classées au top 10</div>
+                    <img src="images/kings_of_pop2.bmp" alt="My test image">
+                </div>
             </div>
 
-            <!-- FOOTER -->
-            <footer>
-                <p class="pull-right"><a href="#">Back to top</a></p>
-                <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-            </footer>
+
+            <!-- outil interactif -->
+            <div id="outer">
+
+                <!-- import Chartjs plugin script -->
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js'></script>
+
+                <script src="https://www.w3schools.com/lib/w3data.js"></script>
+                <script src="js/topten_graph.js"></script>
+
+                <div id="dataviz">
+
+                    <script>replay();</script>
+
+                    <div id="match_artists" class="play_button" onClick="plotdata()"> Let's Go !</div>
+
+                </div>
+            </div>
 
         </div>
 
+        <!-- Une rubrique -->
+        <hr>
+        
+        <div id="Astarisborn">
+            
+            <div id="tubes">
+                <img src="images/star.png" width="140" height="140"> <br>
+                <htitle> <b>A star is born!</b> </htitle> 
+                <br>
+                <hsubtitle><i> Comment fonctionnent les tubes ? Comment ont-ils évolué à travers les âges ? Voici quelques chiffres clé pour comprendre comment ont évolué les succès populaires.</i></hsubtitle>
+                <br><br>
+                <h5> Les tubes entrant au Billboard y restent de plus en plus longtemps : depuis les années 60, le nombre moyen de semaines au top 40 des tubes y entrant a presque doublé ! <br> </h5>
+                <br>
+            </div>
+            
+            <div id="hits">
+                
+                <div class="bk-root">
+                    <div class="bk-plotdiv" id="ff3c38db-80a6-4332-86f5-b4834c3739c8"></div>
+                </div>
+                
+                <script src="js/hit_tube.js"></script>
+                
+                <div style="width:85%;">
+                    <br>
+                    <h5> Dans les années 1960, le tube qui est resté le plus longtemps dans le top 40 est <i> The Twist</i> de Chubby Checker. Il y est resté:<h3>39</h3> <br>semaines!  </h5>
+                    
+                    <h5> Dans les années 2000, <i> I'm Yours</i> de Jason Mraz y est resté: <h3>76 </h3> <br>semaines!</h5>
+                </div>
+            </div>
+            
+            <div>
+                <h5> A cause de ces records de longévité, de moins en moins d'artistes peuvent accéder aux charts .. Cependant, ils sont toujours aussi nombreux (en proportion) à n'y mettre qu'un tube pendant toute leur carrière. </h5>
+            </div>
+            
+            <div id="hits">
+                
+                <div class="bk-root">
+                    <div class="bk-plotdiv" id="ba75b3b0-15c2-4604-978f-a115353770fd"></div>
+                </div>
+                
+                <script src="js/hit_onehitwonder.js"> </script>
+                
+                <div style="width:85%;">
+                    <h3>50%</h3>
+                    <br>
+                    <h5>des artistes qui sont un jour entrés dans le billboard n'ont sorti qu'un seul tube <br>
+                    Cepedant ces artistes ne sortant qu'un seul tube paraissent de moins en moins nombreux !</h5>
+                </div>
+            </div>
+            
+            <div>
+                <h5> Les artistes composant un tube sont nombreux mais réussissent peu ... seulement <b>0,5%</b> d'entre eux deviennent numéro 1 des charts. Mais, parmi ce petit nombre d'artistes, certains sont essentiels (enfin.. à vous de voir !). </h5>
+            </div>
+            
+            <br><br>
+            
+            <div>
+               <div class="bk-root">
+                        <div class="plotdiv" id="0c719321-ff2e-4533-bfab-eb2b090bda15"></div>
+                </div>
+                <script src="js/peaks.js"></script>
+            </div>
+        </div>
+
+        
     </div>
 
-</div>
+	
+	    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper" id="menu">
+        <div class="inner">
+            <!--<h3 class="masthead-brand"> Earworm </h3>-->
+            <nav>
+                <ul class="nav masthead-nav">
+                    <li><a href="a_propos.html">A propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#menu"><img src="images/up_arrow.png" width="50px" height="50px"></a>
+    </footer>
+</div>-->
+
+</div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 </body>
 </html>
