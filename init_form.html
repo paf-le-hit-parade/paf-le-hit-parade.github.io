@@ -1,0 +1,17 @@
+<h4> A vous de jouer ! </h4>
+
+<form id="mes_artistes">
+    <p> Choisissez vos artistes préférés et découvrez votre champion du top 10 !</p>
+    <div class="row_artist" id='selection_artistes'>
+        <div class="input-group">
+            <input class="form-control" list="all_artists"><datalist id="all_artists"></datalist>
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default" onclick="addInput()">
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div id="match_artists" class="play_button" onClick="plotdata()"> Let's Go !</div>

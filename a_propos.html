@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Les tendances</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- Bokeh plot -->
+    <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.3.min.css" type="text/css" />
+
+
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.4.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+			padding-bottom: 1000px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="site-container">
+    
+    <h1 id="header">
+        <hmaintitle><b>LES DESSOUS DU HIT-PARADE</b></hmaintitle>
+        <span style = "display: block;", font-size : 0.7em>
+            Venez découvrir les tendances musicales et les artistes qui ont marqués ces 60 dernières années!</span>
+    </h1>
+    
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper" id="menu">
+        <div class="inner">
+            <!--<h3 class="masthead-brand"> Earworm </h3>-->
+            <nav>
+                <ul class="nav masthead-nav">
+                
+                    <li > <a href="main.html" > Retour sur la page principale</a></li>
+
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    
+    <div align="justify">
+        
+        <h1 class="titreapropos">A qui s'adresse ce site ?</h1>
+        
+        A toutes les personnes qui veulent découvrir s'ils doivent avoir honte des chansons qu'écoutaient probablement leur parents lorsqu'ils étaient adolescents. A tous les amateurs de musiques qui veulent briller en société en annonçant le titre le plus écouté dans les années 50!
+        
+        <h1 class="titreapropos">D'où proviennent les données ?</h1>
+        
+        <p> Toutes les statistiques réalisées sur ce site internet ont été obtenues à partir des données issues du "Whitburn Project". C'est un vaste projet réalisé par un très grand nombre d'amateur de musique. Il a été conçu pour préserver et partager des enregistrements de haute qualité, des chansons les plus populaires depuis les années 1890. Le jeu de données que nous possédons comporte environ 40 000 chansons qui ont été des tubes sur les classements (hit-parades) du Billboard de 1890 à 2015. Le Billboard est un magazine hebdomadaire américain qui publie chaque semaine plusieurs hit-parades relatifs aux succés des titres musicaux et albums les plus populaires. Ces hit-parades sont internationnalement reconnus.</p>
+        
+        <h1 class="titreapropos">Et nous, qu'avons-nous fait de ces données ?</h1>
+        
+        <p> Notre jeu de données se présente sous la forme d'un tableau qui contient plus de 100 colonnes. Il enregistre notamment l'année de la chanson considérée, l'artiste, le label, les écrivains et bien sûr le nombre de semaine où la chanson reste dans les classements. On retrouve même, semaine par semaine, la position de la chanson dans le hit-parade.</p>
+        
+        <p> Comme de nombreuses données sont manquantes, nous n'exploitons la base de données qu'à partir des années 1950.Les chansons que nous représentons dans nos graphiques sont celles qui se classent dans le top 10 du hit-parade du Billboard. </p>
+        
+        <p> Les classements que nous présentons ici sont donc des classements américains, les titres qui ont donc été le plus écoutés ne correspondent pas forcément aux plus gros succès français.</p>
+        
+        <h1 class="titreapropos">Qui sommes-nous ?</h1>
+        
+        <p> Camille Charreaux, Tom Duchemin, Emma Montarsolo et Irène Truche.<p>
+        
+        <p>Nous sommes quatre étudiants en dernière année d'école d'ingénieur à l'ENSAE ParisTech et nous avons réalisé ce site dans le cadre de notre cours de DataViz.<p>
+
+        
+    </div>
+    
+
+    
+    
+</div>
+
+</body>
+    
+
+</html>

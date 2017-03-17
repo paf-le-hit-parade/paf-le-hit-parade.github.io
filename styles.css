@@ -1,0 +1,636 @@
+/*
+ * Globals FOR COVER
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+    color: #151515;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+    color: #333;
+    text-shadow: none; /* Prevent inheritance from `body` */
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+/*
+ * Base structure
+ */
+
+html,
+body {
+    height: 100%;
+    background-color: #ffffff;
+    color: #151515;
+    text-align: center;
+    font-family: Centaur MT;
+    /*text-shadow: 0 1px 3px rgba(0,0,0,0.5);*/
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/piano.jpg');
+    /*background-image: url("images/piano.jpg");*/
+    background-size: cover;
+    display: table;
+    width: 100%;
+    height: 100%; /* For at least Firefox */
+    min-height: 100%;
+    -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+    padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+    display: inline-block;
+}
+.masthead-nav > li + li {
+    margin-left: 20px;
+}
+.masthead-nav > li > a {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #151515; /* IE8 proofing */
+    color: rgba(0,0,0,.5);
+    border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+    background-color: transparent;
+    border-bottom-color: #a9a9a9;
+    border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+    color: #151515;
+    border-bottom-color: #151515;
+}
+
+@media (min-width: 768px) {
+    .masthead-brand {
+        float: left;
+    }
+    .masthead-nav {
+        float: none;
+    }
+}
+
+h1#header
+{
+  color: #ffffff;
+  height: 258px;
+  background: url(images/piano.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  margin: 0 ;
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 50px;
+  text-align: center;
+  
+}
+
+/*
+ * Cover
+ */
+
+.cover {
+    padding: 0 20px;
+}
+.cover .btn-lg {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+    /* Pull out the header and footer */
+    .masthead {
+        position: fixed;
+        top: 0;
+    }
+    /*.mastfoot {
+        position: fixed;
+        bottom: 0;
+    }*/
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+    /* Handle the widths */
+    .masthead,
+    /*.mastfoot,*/
+    .cover-container {
+        width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+}
+
+@media (min-width: 992px) {
+    .masthead,
+    /*.mastfoot,*/
+    .cover-container {
+        width: 700px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Handle the widths */
+    .navbar-wrapper {
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-wrapper {
+        margin-right: auto;
+        margin-left: auto;
+        width: 700px;
+    }
+}
+
+
+/* -----------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+-------------------------------------------------- */
+
+/* DATAVIZ CONTENT
+-------------------------------------------------- */
+
+.dataviz-container {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.container-themes {
+	padding-top: 20px;
+	background: #3e3636;
+	color: #ffffff;
+	border-radius: 10px;
+}
+
+/* Center align the text within the three columns below the carousel */
+/* Center align the text within the three columns below the carousel */
+.themes .col-lg-4 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+h2 {
+    font-weight: bold;
+	font-family: Centaur;
+	
+}
+.themes .col-lg-4 p {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.titregraphique{
+	font-weight: bold;
+	font-family: Centaur;
+	color: #ffffff;
+	font-size: 1.4em;
+}
+
+
+.dangereux3
+{
+    display: inline-block;
+    
+    width: 30%;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bk-root{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#Cetaitmieuxavant{
+    background-color:#ebebe0;
+	padding-top: 10px;
+	border-radius: 10px;
+	color: #3e3636;
+    H2 { text-align: center }
+}
+#battles{
+	background-color:#3e3636;
+	padding-top: 10px;
+	border-radius: 10px;
+	color: #ebebe0;
+    H2 { text-align: center }
+}
+
+#Astarisborn{
+    background-color:#ebebe0;
+	padding-top: 10px;
+	border-radius: 10px;
+	color: #3e3636;
+    H2 { text-align: center }
+}
+
+.bk-root{
+	color: #151515;
+}
+
+#queenpop
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto; 
+}
+
+#kingpop
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto; 
+}
+
+.imagekingqueen{
+    margin: auto;
+}
+
+#hits
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+    margin-right:20px;
+}
+
+#relevantnumber
+{
+  position: relative;
+  size: 100;
+  height: 40%;
+  display: table-cell;
+  vertical-align: bottom;
+  margin: 0 ;
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 10px;
+  text-align: center;
+  
+}
+
+h3 {
+    font-family: Centaur;
+    font-weight: bold;
+	font-size:1000%;
+    text-align : center;
+    line-height: 40px;
+}
+
+h5 {
+    font-family: Centaur MT;
+	font-size:120%;
+    text-align : justify;
+    padding: 30px;
+    line-height: 30px;
+	
+}
+
+h5bis{
+	font-family: Centaur MT;
+	font-size:120%;
+    text-align : left;
+}
+
+h6{
+    font-family: Centaur MT;
+	font-size:120%;
+    text-align : center;
+    padding: 30px;
+}
+
+hgraphtitle{
+	font-size:150%;
+	font-weight: bold;
+	
+}
+hgraphtitle span{
+	margin-left: 30px;
+}
+
+hsubtitle{
+	font-family: Centaur;
+	font-size:120%;
+	
+}
+
+hmaintitle{
+	font-family: Broadway;
+	font-size: 170%;
+	margin-left: 50px;
+}
+
+hintro{
+    font-family: Centaur;
+	font-size: 75%
+}
+
+
+htitle{
+	font-family: Centaur;
+	font-size:350%;	
+	font-weight: bold;
+}
+
+htitle2{
+	font-family: Centaur;
+	font-size:150%;	
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+footer{
+    position: fixed;
+    color: #151515;
+    width: inherit;
+    bottom: 5px;
+    right: 5px;
+    /*background-color: #333333;*/
+    z-index: 2;
+}
+
+.axis {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis--y path {
+    display: none;
+}
+
+.bar {
+    fill: #3182bd;
+    fill-opacity: .9;
+}
+
+.wld {
+    fill: #9ecae1;
+}
+
+.chart-title {
+    margin-bottom: 0;
+}
+
+.source {
+    margin-top: 0;
+    font-size: 11px;
+}
+
+h4bis {
+    text-align: center;
+    font-family: "Centaur";
+    font-size: 500%;
+    font-weight: bold;
+    line-height: 70px;
+    margin: 0 0 70px;
+    text-align: center;
+}
+
+/* pour l'outil interactif battle of stars */
+#outer{
+    display: table;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+#dataviz {
+    /*background-color: #3e3636;*/
+    width: 70%;
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+datalist {
+    height: 10px;
+}
+
+.alert {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.row_artist {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+h4 { text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 54px;
+    font-weight: 300;
+    line-height: 58px;
+    margin: 0 0 58px;
+}
+
+#cc {
+    margin: auto;
+    width: 80%;
+}
+
+canvas {
+    margin: auto;
+}
+
+.play_button {
+    width: 100px;
+    color: #ffffff;
+    background: #2b90d9;
+    display: flex;
+    overflow: hidden;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    padding: 12px 12px;
+
+    cursor: pointer;
+    user-select: none;
+    transition: all 60ms ease-in-out;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none !important;
+    border: 0 none;
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 160px;
+
+}
+
+.play_button:hover {
+    transition: all 60ms ease;
+
+    opacity: .85;
+}
+
+.play_button:active {
+    transition: all 60ms ease;
+    opacity: .75;
+}
+
+.play_button:focus {
+    outline: 1px dotted #959595;
+    outline-offset: -4px;
+}
+/* -----------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+-------------------------------------------------- */
+
+/* A PROPOS CONTENT
+-------------------------------------------------- */
+.titreapropos{
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+  
+}
+
+/* GRAPHIQUE JAVASCRIPT GENRE */
+.label {
+  fill: #777;
+}
+
+.year.label {
+  font: 500 160px "Centaur";
+  fill: #ddd;
+}
+
+.year.label.active {
+  fill: #aaa;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor: ew-resize;
+}
+
+@import url(../style.css?aea6f0a);
+
+#chart {
+  margin-left: 100px;
+  height: 10px;
+}
+
+.dot {
+  stroke: #000;
+}
+
+/* Tube de l'année de naissance */
+
+#curseur{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 5%;
+}
+#born_tube {
+    display: inline;
+    margin: auto;
+}
+#nb_weeks {
+    background: #f20553;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+    color: #ffffff; font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 100%;
+}
+#songdata {
+    position: relative;
+    top: 20%;
+}
+.printhit{
+    margin: 12px;
+}
