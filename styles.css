@@ -110,7 +110,7 @@ h1#header
 {
   color: #ffffff;
   height: 258px;
-  background: url(images/piano.jpg);
+  /*background: url(images/piano.jpg);*/
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
