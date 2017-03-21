@@ -108,7 +108,7 @@ h1#header
 {
   color: #ffffff;
   height: 258px;
-  opacity: 0.6;
+  opacity: 0.2;
   background: url(images/piano.jpg);
   background-repeat: no-repeat;
   background-size:cover;
@@ -392,7 +392,7 @@ b {
 hintro{
     font-family: Centaur;
     font-size: 75%;
-    width: 70%;	
+    width: 50%;	
 }
 
 
