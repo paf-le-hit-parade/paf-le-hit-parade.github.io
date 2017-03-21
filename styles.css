@@ -378,10 +378,13 @@ hsubtitle{
 	
 }
 
-hmaintitle{
+hmaintitle {
 	font-family: Broadway;
 	font-size: 170%;
 	margin-left: 50px;
+}
+
+b {
 	color: #151515;
 }
 
