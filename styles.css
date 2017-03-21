@@ -11,6 +11,7 @@ a:hover {
 
 /* Custom default button */
 .btn-default,
+
 .btn-default:hover,
 .btn-default:focus {
     color: #333;
@@ -20,7 +21,8 @@ a:hover {
 }
 /*
  * Base structure
- */
+
+*/
 
 html,
 body {
@@ -385,14 +387,9 @@ hmaintitle {
 	margin-left: 50px;
 }
 
-b {
-	color: #151515;
-}
-
 hintro{
     font-family: Centaur;
-    font-size: 75%;
-    width: 50%;	
+    font-size: 75%;	
 }
 
 
