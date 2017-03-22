@@ -39,7 +39,7 @@ function addInput() {
 
 
 // bar chart colors
-let safeColors = ['#40FF00','#00FFFF','#FE2E64','#FE2E2E','#D7DF01'];
+let safeColors = ["#7D85E5","#49F1C3","#FC9665","#9D2F74","#36C6E4","#8FD847","#E62A30"];
 
 function datalistValidator(entry) {
     var obj = $("#all_artists").find("option[value='" + entry + "']");
