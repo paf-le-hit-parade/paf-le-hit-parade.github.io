@@ -132,7 +132,7 @@ function plotdata() {
             champion_msg.className="alert alert-success";
             champion_msg.setAttribute('role','alert');
             champion_msg.id="champion"
-            champion_msg.innerText="And your winner is... "+key+" ! :)";
+            champion_msg.innerText="And the winner is... "+key+" ! :)";
 
             // draw bar chart
             Chart.defaults.global.defaultFontColor = '#ffffff';
