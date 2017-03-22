@@ -77,7 +77,7 @@ function plotdata() {
         alert_msg.className = "alert alert-danger";
         alert_msg.setAttribute("role","alert");
         alert_msg.innerHTML="<strong>Oh oh!</strong> " +
-            "Nous n'avons pas les données pour certain de vos artistes. Aidez-vous de la liste pour choisir !";
+            "Nous n'avons pas les données pour certain de vos artistes. Aidez-vous de la liste pour choisir ! Si elle ne s'affiche pas, il faut réactualiser la page :(";
         document.getElementById("dataviz").insertBefore(alert_msg,document.getElementById("match_artists"));
     } else {
         if (document.getElementById("mauvais_artiste")){
@@ -132,7 +132,7 @@ function plotdata() {
             champion_msg.className="alert alert-success";
             champion_msg.setAttribute('role','alert');
             champion_msg.id="champion"
-            champion_msg.innerText="Votre champion est "+key+" ! :)";
+            champion_msg.innerText="And your winner is... "+key+" ! :)";
 
             // draw bar chart
             Chart.defaults.global.defaultFontColor = '#ffffff';
