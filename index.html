@@ -344,6 +344,42 @@
         </div>
     </div>
 
+    <!-- COVERFLOW ================================================== -->
+    <div class="coverflow">
+        <div class="cover">
+            <img class="cover-image" src="Coverflow/demo/annee50.jpg">
+        </div>
+        <div class="cover">
+            <img class="cover-image" src="Coverflow/demo/annee60.jpg">
+        </div>
+        <div class="cover">
+            <img class="cover-image" src="Coverflow/demo/annee70.jpg">
+        </div>
+        <div class="cover">
+            <img class="cover-image" src="Coverflow/demo/annee80.jpg">
+        </div>
+        <div class="cover">
+            <img class="cover-image" src="Coverflow/demo/annee90.jpg">
+        </div>
+        <div class="cover">
+            <img class="cover-image" src="Coverflow/demo/annee2000.jpg">
+        </div>
+        <div class="cover">
+            <img class="cover-image" src="Coverflow/demo/annee2010.jpg">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.js"></script>
+    <script src='Coverflow/jquery.touchSwipe.min.js'></script>
+    <script src='Coverflow/jquery.interpolate.min.js'></script>
+    <script src='Coverflow/jquery.reflection.js'></script>
+    <script src='Coverflow/jquery.coverflow.js'></script>
+    <script>
+        $(function() {
+            $('.coverflow').coverflow();
+        });
+    </script>
+
 
     <!-- FOOTER -->
     <footer>
@@ -355,5 +391,6 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
 </body>
 </html>
