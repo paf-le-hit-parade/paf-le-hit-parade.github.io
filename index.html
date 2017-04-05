@@ -117,6 +117,8 @@
 
         <!-- Une rubrique -->
         <hr>
+		    <!-- COVERFLOW ================================================== -->
+
 
          <div id="Cetaitmieuxavant">
             <img src="images/phonograph.png" alt="rock" width="140" height="140"> <br>
@@ -157,15 +159,91 @@
 			
 		</div>
 		
-
+	
 		
     </div>
+	
+	<div><br><br>
+	<h5ter>Parmi les tubes qui sont restés le plus longtemps dans le top 10 ces dernières décennies, on retrouve de nombreuses légendes... mais aussi des artistes qui ont moins marqués les esprits ou qui n'ont pas traversés l'Atlantique. Le tube des années 90 de LeAnn Rimes est cependant resté 18 semaines de plus dans le top 10, que le <i>Hey Jude</i> des Beatles !  </h5ter><br><br><br>
+	</div>
+	
+			<script>
+			$(function() {
+
+				/* CD covers */
+
+				<!-- if ($.fn.reflect) { -->
+					<!-- $('.photos .cover').reflect(); -->
+				<!-- } -->
+
+				$('.photos').coverflow({
+						index:			3,
+						density:		2,
+						innerOffset:	50,
+						innerScale:		.7,
+						animateStep:	function(event, cover, offset, isVisible, isMiddle, sin, cos) {
+							if (isVisible) {
+								if (isMiddle) {
+									$(cover).css({
+										'filter':			'none',
+										'-webkit-filter':	'none'
+									});
+								} else {
+									var brightness	= 1 + Math.abs(sin),
+										contrast	= 1 - Math.abs(sin),
+										filter		= 'contrast('+contrast+') brightness('+brightness+')';
+									$(cover).css({
+										'filter':			filter,
+										'-webkit-filter':	filter
+									});
+								}
+							}
+						},
+	
+					
+					confirm:		function() {
+						console.log('Confirm');
+					},
+
+					<!-- before:			function() { -->
+						<!-- $('#photos-name').stop(true); -->
+					<!-- }, -->
+
+					select:			function(event, cover) {
+						var img = $(cover).children().andSelf().filter('img').last();
+						$('#photos-name').text(img.data('name') || 'unknown').last();
+						$('#photos-year').text(img.data('year') || 'unknown').stop(true);
+					},
+				});	
+
+			
+			});
+		</script>
+
+
+		<div class="photos" autofocus>
+			<img class="cover" data-name="Elvis  - Don't Be Cruel" data-year="1950s" src="images/annee50.jpg"/>
+			<img class="cover" data-name="The Beatles - Hey Jude" data-year="1960s" src="images/annee60.jpg"/>
+			<img class="cover" data-name="The Bee Gees - How Deep Is Your Love" data-year="1970s" src="images/annee70.jpg"/>
+			<img class="cover" data-name="John Cougar - Hurts So Good" data-year="1980s" src="images/annee80.jpg"/>
+			<img class="cover" data-name="LeAnn Rimes - How Do I Live" data-year="1990s" src="images/annee90.jpg"/>
+			<img class="cover" data-name="Timbaland ft One Republic - Apologize" data-year="2000s" src="images/annee2000.jpg"/>
+			<img class="cover" data-name="LMFAO - Party Rock Anthem" data-year="2010s" src="images/annee2010.jpg"/>
+			</div>
+		<div id="photos-info">
+			<div id="photos-year"></div>
+			<div id="photos-name"></div>
+			
+		</div>
 
 
 	<br>
 
+	<div>
+	    <h5ter> Maintenant à vous de jouer, sélectionnez votre année de naissance et découvrez le titre qui dominait les charts US l'année de votre naissance ! <br><br> </h5ter>
+	</div>
              <div id="curseur">
-                 <h1> Sélectionnez votre année de naissance et découvrez le titre qui dominait les charts US à ta naissance ! </h1>
+
                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
                  <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.1.6/js/ion.rangeSlider.min.js"></script>
                  <div>
@@ -344,30 +422,6 @@
         </div>
     </div>
 
-    <!-- COVERFLOW ================================================== -->
-    <div class="coverflow">
-        <div class="cover">
-            <img class="cover-image" src="Coverflow/demo/annee50.jpg">
-        </div>
-        <div class="cover">
-            <img class="cover-image" src="Coverflow/demo/annee60.jpg">
-        </div>
-        <div class="cover">
-            <img class="cover-image" src="Coverflow/demo/annee70.jpg">
-        </div>
-        <div class="cover">
-            <img class="cover-image" src="Coverflow/demo/annee80.jpg">
-        </div>
-        <div class="cover">
-            <img class="cover-image" src="Coverflow/demo/annee90.jpg">
-        </div>
-        <div class="cover">
-            <img class="cover-image" src="Coverflow/demo/annee2000.jpg">
-        </div>
-        <div class="cover">
-            <img class="cover-image" src="Coverflow/demo/annee2010.jpg">
-        </div>
-    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.js"></script>
     <script src='Coverflow/jquery.touchSwipe.min.js'></script>
